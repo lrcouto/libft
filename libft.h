@@ -6,7 +6,7 @@
 /*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2020/02/03 17:17:37 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/02/27 10:51:11 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,5 +132,13 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+
+/*
+** FUNÇÕES ADICIONAIS
+*/
+
+char				*ft_strnew(size_t size);
+
+void				ft_strdel(char **s);
 
 #endif

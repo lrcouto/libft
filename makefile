@@ -6,7 +6,7 @@
 #    By: lcouto <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/24 20:37:04 by lcouto            #+#    #+#              #
-#    Updated: 2020/02/03 17:05:06 by lcouto           ###   ########.fr        #
+#    Updated: 2020/02/27 10:50:48 by lcouto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRCS =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isascii.c ft_isdigit.c \
 BONUSSRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
+ADDISRCS = ft_strnew.c ft_strdel.c
+
 OBJECTS = ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isascii.o ft_isdigit.o \
 		ft_isprint.o ft_memccpy.o ft_memchr.o ft_memcpy.o ft_memmove.o ft_memset.o \
 		ft_strchr.o ft_strdup.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strncmp.o \
@@ -31,6 +33,8 @@ OBJECTS = ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isascii.o ft_isdigit.
 
 BONUSOBJS = ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o \
 			ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+
+ADDIOBJS = ft_strnew.o ft_strdel.o
 
 INCLUDES = ./
 
@@ -46,8 +50,13 @@ bonus: $(NAME)
 	ar -rc $(NAME) $(OBJECTS) $(BONUSOBJS)
 	ranlib $(NAME)
 
+additionals: $(NAME)
+	gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS) $(ADDISRCS) libft.h
+	ar -rc $(NAME) $(OBJECTS) $(ADDIOBJS)
+	ranlib $(NAME)
+
 clean:
-	/bin/rm -f $(OBJECTS) $(BONUSOBJS)
+	/bin/rm -f $(OBJECTS) $(BONUSOBJS) $(ADDIOBJS)
 
 fclean: clean
 	/bin/rm -f $(NAME)
