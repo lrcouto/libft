@@ -6,7 +6,7 @@
 /*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2020/02/27 10:51:11 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/03/04 17:19:13 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,5 +140,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 char				*ft_strnew(size_t size);
 
 void				ft_strdel(char **s);
+
+char				*ft_itoa_base(int n, unsigned int base);
 
 #endif
