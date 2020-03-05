@@ -6,7 +6,7 @@
 #    By: lcouto <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/24 20:37:04 by lcouto            #+#    #+#              #
-#    Updated: 2020/03/04 17:09:42 by lcouto           ###   ########.fr        #
+#    Updated: 2020/03/05 15:30:34 by lcouto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,8 +41,8 @@ INCLUDES = ./
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)	libft.h
-	ar -rc $(NAME) $(OBJECTS)
+	gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS) $(BONUSSRCS) $(ADDISRCS) libft.h
+	ar -rc $(NAME) $(OBJECTS) $(BONUSOBJS) $(ADDIOBJS)
 	ranlib $(NAME)
 
 bonus: $(NAME)
@@ -50,7 +50,7 @@ bonus: $(NAME)
 	ar -rc $(NAME) $(OBJECTS) $(BONUSOBJS)
 	ranlib $(NAME)
 
-additionals: $(NAME)
+adds: $(NAME)
 	gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS) $(ADDISRCS) libft.h
 	ar -rc $(NAME) $(OBJECTS) $(ADDIOBJS)
 	ranlib $(NAME)
@@ -63,4 +63,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re bonus
+.PHONY: clean fclean all re bonus adds
