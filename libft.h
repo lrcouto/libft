@@ -6,7 +6,7 @@
 /*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2020/03/04 17:19:13 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/03/05 16:32:57 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,5 +142,7 @@ char				*ft_strnew(size_t size);
 void				ft_strdel(char **s);
 
 char				*ft_itoa_base(int n, unsigned int base);
+
+char				*ft_itoa_u(unsigned int n);
 
 #endif
