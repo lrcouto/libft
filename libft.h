@@ -6,7 +6,7 @@
 /*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2020/03/05 16:32:57 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/03/06 15:18:17 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <ctype.h>
 # include <limits.h>
+# include <inttypes.h>
 
 /*
 ** STRUCT PARA FUNÇÕES BÔNUS
@@ -144,5 +145,7 @@ void				ft_strdel(char **s);
 char				*ft_itoa_base(int n, unsigned int base);
 
 char				*ft_itoa_u(unsigned int n);
+
+char				*ft_itoa_ptr(uintptr_t n, unsigned int base);
 
 #endif
