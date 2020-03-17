@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 16:26:29 by lcouto            #+#    #+#             */
-/*   Updated: 2020/03/05 16:29:15 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/03/17 14:00:27 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ char			*ft_itoa_u(unsigned int n)
 	unsigned int	i;
 	unsigned int	len;
 
-	if (n < 0)
-		return (0);
-	else
-		nb = (unsigned int)n;
+	nb = n;
 	len = (unsigned int)get_return_len(nb);
 	i = 0;
 	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
