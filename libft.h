@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2020/03/06 15:18:17 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/05/15 15:17:49 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,5 +147,7 @@ char				*ft_itoa_base(int n, unsigned int base);
 char				*ft_itoa_u(unsigned int n);
 
 char				*ft_itoa_ptr(uintptr_t n, unsigned int base);
+
+char				*ft_itoa_base_u(unsigned int n, unsigned int base);
 
 #endif
