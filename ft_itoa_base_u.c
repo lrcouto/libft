@@ -6,7 +6,7 @@
 /*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 15:06:58 by lcouto            #+#    #+#             */
-/*   Updated: 2020/05/15 15:17:49 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/05/20 17:08:00 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char			*ft_itoa_base_u(unsigned int n, unsigned int base)
 	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (0);
 	i = len - 1;
+	if (nb == 0)
+		str[0] = '0';
 	while (nb > 0)
 	{
 		c = (nb % base < 10 ? nb % base + 48 : nb % base + 87);

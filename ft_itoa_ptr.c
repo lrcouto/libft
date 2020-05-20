@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_ptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 15:04:48 by lcouto            #+#    #+#             */
-/*   Updated: 2020/03/06 15:51:23 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/05/20 17:09:24 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char			*ft_itoa_ptr(uintptr_t n, unsigned int base)
 	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (0);
 	i = len - 1;
+	if (nb == 0)
+		str[0] = '0';
 	while (nb > 0)
 	{
 		c = (nb % base < 10 ? nb % base + 48 : nb % base + 87);
