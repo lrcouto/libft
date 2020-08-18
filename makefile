@@ -6,7 +6,7 @@
 #    By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/24 20:37:04 by lcouto            #+#    #+#              #
-#    Updated: 2020/05/15 15:17:49 by lcouto           ###   ########.fr        #
+#    Updated: 2020/08/18 16:59:57 by lcouto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,10 +56,10 @@ adds: $(NAME)
 	ranlib $(NAME)
 
 clean:
-	/bin/rm -f $(OBJECTS) $(BONUSOBJS) $(ADDIOBJS)
+	/bin/rm -f $(OBJECTS) $(BONUSOBJS) $(ADDIOBJS) $(NAME)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	/bin/rm -f $(NAME) $(OBJECTS) $(BONUSOBJS) $(ADDIOBJS) $(NAME)
 
 re: fclean all
 
