@@ -6,7 +6,7 @@
 /*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2020/05/15 15:17:49 by lcouto           ###   ########.fr       */
+/*   Updated: 2020/08/19 18:27:49 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <inttypes.h>
 
 /*
-** STRUCT PARA FUNÇÕES BÔNUS
+** STRUCT FOR BONUS FUNCTIONS
 */
 
 typedef struct		s_list
@@ -34,7 +34,7 @@ typedef struct		s_list
 }					t_list;
 
 /*
-** PRIMEIRA PARTE
+** MANDATORY FUNCTIONS PART 1
 */
 
 void				*ft_memset(void *b, int c, size_t len);
@@ -88,7 +88,7 @@ void				*ft_calloc(size_t n, size_t size);
 char				*ft_strdup(const char *str);
 
 /*
-** SEGUNDA PARTE
+** MANDATORY FUNCTIONS PART 2
 */
 
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -112,7 +112,7 @@ void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
 /*
-** BONUS
+** BONUS FUNCTIONS
 */
 
 t_list				*ft_lstnew(void *content);
@@ -135,7 +135,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 
 /*
-** FUNÇÕES ADICIONAIS
+** ADDITIONAL FUNCTIONS, NOT ORIGINALLY PART OF THE LIBFT PROJECT
 */
 
 char				*ft_strnew(size_t size);
@@ -149,5 +149,14 @@ char				*ft_itoa_u(unsigned int n);
 char				*ft_itoa_ptr(uintptr_t n, unsigned int base);
 
 char				*ft_itoa_base_u(unsigned int n, unsigned int base);
+
+int					get_next_line(int fd, char **line);
+
+char				*ft_strdup_gnl(const char *s1);
+
+char				*ft_strjoin_gnl(char const *s1, char const *s2);
+
+char				*ft_substr_gnl(char const *s, unsigned int start,
+					size_t len);
 
 #endif

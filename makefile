@@ -6,7 +6,7 @@
 #    By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/24 20:37:04 by lcouto            #+#    #+#              #
-#    Updated: 2020/08/18 16:59:57 by lcouto           ###   ########.fr        #
+#    Updated: 2020/08/19 18:16:15 by lcouto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRCS =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isascii.c ft_isdigit.c \
 BONUSSRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-ADDISRCS = ft_strnew.c ft_strdel.c ft_itoa_base.c ft_itoa_u.c ft_itoa_ptr.c ft_itoa_base_u.c
+ADDISRCS = ft_strnew.c ft_strdel.c ft_itoa_base.c ft_itoa_u.c ft_itoa_ptr.c ft_itoa_base_u.c \
+			get_next_line.c ft_strjoin_gnl.c ft_strdup_gnl.c ft_substr_gnl.c
 
 OBJECTS = ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isascii.o ft_isdigit.o \
 		ft_isprint.o ft_memccpy.o ft_memchr.o ft_memcpy.o ft_memmove.o ft_memset.o \
@@ -34,7 +35,8 @@ OBJECTS = ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isascii.o ft_isdigit.
 BONUSOBJS = ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o \
 			ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
 
-ADDIOBJS = ft_strnew.o ft_strdel.o ft_itoa_base.o ft_itoa_u.o ft_itoa_ptr.o ft_itoa_base_u.o
+ADDIOBJS = ft_strnew.o ft_strdel.o ft_itoa_base.o ft_itoa_u.o ft_itoa_ptr.o ft_itoa_base_u.o \
+			get_next_line.o ft_strjoin_gnl.o ft_strdup_gnl.o ft_substr_gnl.o
 
 INCLUDES = ./
 
