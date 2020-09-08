@@ -159,4 +159,6 @@ char				*ft_strjoin_gnl(char const *s1, char const *s2);
 char				*ft_substr_gnl(char const *s, unsigned int start,
 					size_t len);
 
+double				ft_atof(char *s);
+
 #endif
