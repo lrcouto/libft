@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 11:17:19 by lcouto            #+#    #+#             */
-/*   Updated: 2020/01/27 14:01:50 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 16:14:31 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memchr(const void *arr, int c, size_t n)
 {
-	const unsigned char *p;
+	const unsigned char	*p;
 
 	if (n)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsenra-a <gsenra-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/29 14:26:57 by lcouto            #+#    #+#             */
-/*   Updated: 2023/173/17 18:499:551 by gsenra-a         ###   ########.fr       */
+/*   Created: 2021/04/09 16:17:44 by gsenra-a          #+#    #+#             */
+/*   Updated: 2021/04/09 16:19:40 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	ft_split_counter(char const *s, char c)
 	return (splits);
 }
 
-static void		*ft_free_strings(char **strings)
+static void	*ft_free_strings(char **strings)
 {
 	if (strings == NULL)
 		return (NULL);
@@ -44,7 +44,7 @@ static void		*ft_free_strings(char **strings)
 	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	size_t	a;
@@ -54,8 +54,7 @@ char			**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	a = ft_split_counter(s, c);
-	if ((strs = (char**)malloc(sizeof(char*) * (a + 1))) == NULL)
-		return (NULL);
+	strs = (char **)malloc(sizeof(char *) * (a + 1));
 	a = 0;
 	j = -1;
 	while (s[++j])
@@ -65,7 +64,8 @@ char			**ft_split(char const *s, char c)
 		i = 0;
 		while (s[j + i] && s[j + i] != c)
 			i++;
-		if ((strs[a++] = ft_substr(s, j, i)) == NULL)
+		strs[a++] = ft_substr(s, j, i);
+		if (strs == NULL)
 			return (ft_free_strings(strs));
 		j += i - 1;
 	}

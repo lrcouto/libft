@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_gnl.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 16:24:45 by lcouto            #+#    #+#             */
-/*   Updated: 2020/08/19 18:12:34 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 16:21:38 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 char	*ft_strjoin_gnl(char const *s1, char const *s2)
 {
-	unsigned	int	i;
+	unsigned int	i;
 	char			*str;
 	size_t			s1_len;
 	size_t			s2_len;

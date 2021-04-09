@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 18:24:35 by lcouto            #+#    #+#             */
-/*   Updated: 2020/08/19 18:24:40 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 14:31:28 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 
-static int		ft_count_spaces(const char *str, int i)
+static int	ft_count_spaces(const char *str, int i)
 {
-	while ((str[i] == '\t') || (str[i] == '\v') || (str[i] == '\f') ||
-	(str[i] == '\r') || (str[i] == '\n') || (str[i] == ' '))
+	while ((str[i] == '\t') || (str[i] == '\v') || (str[i] == '\f')
+		|| (str[i] == '\r') || (str[i] == '\n') || (str[i] == ' '))
 	{
 		i++;
 	}
 	return (i);
 }
 
-int				ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int						i;
 	int						is_negative;

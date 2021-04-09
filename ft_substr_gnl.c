@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr_gnl.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 18:15:23 by lcouto            #+#    #+#             */
-/*   Updated: 2020/08/19 18:16:49 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 16:27:36 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 char	*ft_substr_gnl(char const *s, unsigned int start, size_t len)
 {
 	char			*sub;
-	unsigned	int	i;
+	unsigned int	i;
 	size_t			s_len;
 
 	i = 0;
