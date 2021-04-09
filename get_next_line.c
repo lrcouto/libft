@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/19 16:02:30 by lcouto            #+#    #+#             */
-/*   Updated: 2020/08/19 18:25:45 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 16:31:07 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** a fixed buffer size for ease of use.
 */
 
-static int		ft_line_add(char **str, char **line)
+static int	ft_line_add(char **str, char **line)
 {
 	char	*temp;
 	size_t	i;
@@ -43,7 +43,7 @@ static int		ft_line_add(char **str, char **line)
 	return (1);
 }
 
-static int		ft_return(char **str, char **line, int n, int fd)
+static int	ft_return(char **str, char **line, int n, int fd)
 {
 	if (n < 0)
 		return (-1);
@@ -55,18 +55,18 @@ static int		ft_return(char **str, char **line, int n, int fd)
 	return (ft_line_add(&str[fd], line));
 }
 
-int				get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char	*str[200];
 	char		*buffer;
 	char		*temp;
 	int			n;
 
-	if (!(buffer = (char *)malloc(sizeof(char) * (200 + 1))))
-		return (0);
+	buffer = (char *)malloc(sizeof(char) * (200 + 1));
 	if (fd < 0 || line == 0 || 200 < 1)
 		return (-1);
-	while ((n = read(fd, buffer, 200)) > 0)
+	n = read(fd, buffer, 200);
+	while (n > 0)
 	{
 		buffer[n] = '\0';
 		if (str[fd] == NULL)

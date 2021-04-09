@@ -3,53 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:07:24 by gsenra-a          #+#    #+#             */
-/*   Updated: 2020/09/06 17:06:25 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 16:03:27 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include "libft.h"
 
-static int		ft_isspace(char c)
+static int	ft_isspace(char c)
 {
-	if ((c == '\t') || (c == '\v') || (c == '\f') ||
-	(c == '\r') || (c == '\n') || (c == ' '))
+	if ((c == '\t') || (c == '\v') || (c == '\f')
+		|| (c == '\r') || (c == '\n') || (c == ' '))
 		return (1);
 	else
 		return (0);
 }
 
-static int		handle_whitespaces(char *s, int i)
+static int	handle_whitespaces(char *s, int i)
 {
 	while (ft_isspace(s[i]) == 1)
 		i++;
 	return (i);
 }
 
-static int		handle_sign(char *s, int i)
+static int	handle_sign(char *s, int i)
 {
-	int sign;
+	int	sign;
 
-	sign = (s[i] == '-') ? -1 : 1;
+	if (s[i] == '-')
+		sign = -1;
+	else
+		sign = 1;
 	return (sign);
 }
 
-double			ft_atof(char *s)
+double	ft_atof(char *s)
 {
 	double		val;
 	double		power;
 	int			i;
 	int			sign;
 
-	i = 0;
 	val = 0.0;
 	power = 1.0;
-	i = handle_whitespaces(s, i);
+	i = handle_whitespaces(s, 0);
 	sign = handle_sign(s, i);
-	i = (s[i] == '+' || s[i] == '-') ? i + 1 : i;
+	if (s[i] == '+' || s[i] == '-')
+		i++;
 	while (ft_isalnum((int)s[i]) == 1)
 	{
 		val = 10.0 * val + (s[i] - '0');

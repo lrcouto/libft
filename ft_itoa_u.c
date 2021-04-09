@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 16:26:29 by lcouto            #+#    #+#             */
-/*   Updated: 2020/03/17 14:00:27 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 15:54:31 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int		get_return_len(unsigned int n)
+static int	get_return_len(unsigned int n)
 {
 	unsigned int	len;
 
@@ -26,7 +26,7 @@ static int		get_return_len(unsigned int n)
 	return (len + 1);
 }
 
-char			*ft_itoa_u(unsigned int n)
+char	*ft_itoa_u(unsigned int n)
 {
 	char			*str;
 	unsigned int	nb;
@@ -36,8 +36,7 @@ char			*ft_itoa_u(unsigned int n)
 	nb = n;
 	len = (unsigned int)get_return_len(nb);
 	i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
-		return (0);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	i = len - 1;
 	while (nb >= 10)
 	{

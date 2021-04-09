@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 11:14:45 by lcouto            #+#    #+#             */
-/*   Updated: 2020/01/27 11:15:01 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 14:32:39 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 void	*ft_bzero(void *b, size_t n)
 {
-	unsigned char *temp;
+	unsigned char	*temp;
 
-	temp = (unsigned char*)b;
+	temp = (unsigned char *)b;
 	while (n > 0)
 	{
 		*(temp++) = '\0';

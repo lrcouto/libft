@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2021/03/18 20:33:32 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/04/09 16:33:49 by gsenra-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 ** STRUCT FOR BONUS FUNCTIONS
 */
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -45,7 +45,7 @@ void				*ft_bzero(void *b, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 
 void				*ft_memccpy(void *str_dest,
-					const void *str_src, int c, size_t n);
+						const void *str_src, int c, size_t n);
 
 void				*ft_memmove(void *dest, const void *src, size_t n);
 
@@ -64,7 +64,7 @@ char				*ft_strchr(const char *str, int c);
 char				*ft_strrchr(const char *str, int c);
 
 char				*ft_strnstr(const char *haystack,
-					const char *needle, size_t len);
+						const char *needle, size_t len);
 
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -133,7 +133,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+						void (*del)(void *));
 
 /*
 ** ADDITIONAL FUNCTIONS, NOT ORIGINALLY PART OF THE LIBFT PROJECT
@@ -158,7 +158,7 @@ char				*ft_strdup_gnl(const char *s1);
 char				*ft_strjoin_gnl(char const *s1, char const *s2);
 
 char				*ft_substr_gnl(char const *s, unsigned int start,
-					size_t len);
+						size_t len);
 
 double				ft_atof(char *s);
 
