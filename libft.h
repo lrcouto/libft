@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsenra-a <gsenra-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lcouto <lcouto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2021/04/09 16:33:49 by gsenra-a         ###   ########.fr       */
+/*   Updated: 2021/06/09 02:53:42 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,5 +161,7 @@ char				*ft_substr_gnl(char const *s, unsigned int start,
 						size_t len);
 
 double				ft_atof(char *s);
+
+long long int		ft_atoll(char *str);
 
 #endif
