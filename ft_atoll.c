@@ -6,7 +6,7 @@
 /*   By: lcouto <lcouto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 01:42:39 by lcouto            #+#    #+#             */
-/*   Updated: 2021/06/09 02:58:15 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/06/17 21:14:26 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static int	ft_count_spaces(const char *str, int i)
 
 long long int	ft_atoll(char *str)
 {
-	int						i;
-	int						is_negative;
+	int				i;
+	long long int	is_negative;
 	long long int	result;
 
 	i = 0;
