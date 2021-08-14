@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 01:42:39 by lcouto            #+#    #+#             */
-/*   Updated: 2021/06/17 21:14:26 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/08/13 02:10:44 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ long long int	ft_atoll(char *str)
 		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
-		return (is_negative * result);
+	return (is_negative * result);
 }

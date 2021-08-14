@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcouto <lcouto@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:08:47 by lcouto            #+#    #+#             */
-/*   Updated: 2021/06/09 02:53:42 by lcouto           ###   ########.fr       */
+/*   Updated: 2021/08/13 01:39:26 by lcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "hashmap.h"
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
@@ -163,5 +164,13 @@ char				*ft_substr_gnl(char const *s, unsigned int start,
 double				ft_atof(char *s);
 
 long long int		ft_atoll(char *str);
+
+int					ft_strcmp(const char *s1, const char *s2);
+
+char				*variadic_strjoin(unsigned int arg_quantity, ...);
+
+void				free_2d_array(char **ptr);
+
+void				print_2d_array_fd(char **array, int fd);
 
 #endif
