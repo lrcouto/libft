@@ -6,7 +6,7 @@
 #    By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/24 20:37:04 by lcouto            #+#    #+#              #
-#    Updated: 2021/08/13 02:05:40 by lcouto           ###   ########.fr        #
+#    Updated: 2021/08/14 02:33:45 by lcouto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,8 +43,9 @@ ifeq ($(SANITIZE_L),true)
 endif
 
 $(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar -rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@echo "Created libft.a file successfully"
 
 $(DIR_OBJS)/%.o: $(DIR_SRCS)/%.c
 		@mkdir -p objects
