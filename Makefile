@@ -6,7 +6,7 @@
 #    By: lcouto <lcouto@student.42sp.org.br>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/24 20:37:04 by lcouto            #+#    #+#              #
-#    Updated: 2021/08/14 02:33:45 by lcouto           ###   ########.fr        #
+#    Updated: 2021/08/14 16:32:14 by lcouto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,12 +61,12 @@ $(DIR_OBJS)/%.o: $(DIR_SRCS)/%.c
 all: $(NAME)
 
 clean:
-		$(RM) $(OBJS)
-		$(RM) $(DIR_OBJS)
+		@$(RM) $(OBJS)
+		@$(RM) $(DIR_OBJS)
 
 fclean:	clean
-		$(RM) $(NAME)
-		$(RM) $(DIR_OBJS)
+		@$(RM) $(NAME)
+		@$(RM) $(DIR_OBJS)
 
 re:		fclean all
 
